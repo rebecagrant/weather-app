@@ -77,3 +77,9 @@ h2 {
 footer {
   margin-bottom: 35px;
 }
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
