@@ -38,15 +38,10 @@
       <div class="row align-self-center">
         <!-- City START -->
         <div class="col">
-          <h1 id="current-city">
-            London
-          </h1>
-          <h2 id="date">
-            Monday 20:30
+          <h1 id="current-city"></h1>
+          <h2>Last updated on <span id="date"></span>
           </h2>
-          <h2 id="status">
-            Clouds
-          </h2>
+          <h2 id="description"></h2>
         </div>
         <!-- City END -->
       </div>
@@ -55,10 +50,8 @@
       <!-- Two columns (degrees) START -->
       <div class="row justify-content-between align-items-end">
         <div class="col-md-8">
-          <img src="images/clima.svg" class="main-icon" alt="cloudy" width="150" />
-          <h3 class="degrees" id="temperature">
-            10
-          </h3>
+          <img src="" class="main-icon" id="icon" alt="cloudy" width="150" />
+          <h3 class="degrees" id="temperature"></h3>
           <div id="select">
             <a href="" class="links" id="celsius">
               °C
@@ -71,9 +64,8 @@
         </div>
         <div class="col-md-4">
           <ul class="list-unstyled">
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 73%</li>
-            <li>Wind: 2 km/h</li>
+            <li>Humidity: <span id="humidity">%</span></li>
+            <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
       </div>
@@ -140,7 +132,7 @@
 
     <!-- Credit START -->
     <footer class="row justify-content-center">
-      Coded by&nbsp;<a href="https://github.com/rebecagrant/" target="_blank">Rebeca Grant</a>
+      <small>Coded by&nbsp;<a href="https://github.com/rebecagrant/" target="_blank">Rebeca Grant</a></small>
     </footer>
     <!-- Credit END -->
   </div>
