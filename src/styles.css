@@ -29,6 +29,10 @@ h2 {
   font-size: 18px !important;
 }
 
+h2:first-letter {
+  text-transform: capitalize;
+}
+
 .degrees {
   font-size: 70px !important;
   font-weight: 500;
@@ -39,19 +43,19 @@ h2 {
   margin-right: 30px;
 }
 
-.links {
+.links a {
   font-size: 18px;
   text-decoration: none;
   color: black;
   vertical-align: top;
 }
 
-.links:hover {
+.links a:hover {
   text-decoration: none;
   color: gray;
 }
 
-.links:active {
+.active {
   color: gray;
 }
 

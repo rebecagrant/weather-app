@@ -38,7 +38,7 @@
       <div class="row align-self-center">
         <!-- City START -->
         <div class="col">
-          <h1 id="current-city"></h1>
+          <h1 id="city"></h1>
           <h2>Last updated on <span id="date"></span>
           </h2>
           <h2 id="description"></h2>
@@ -52,19 +52,19 @@
         <div class="col-md-8">
           <img src="" class="main-icon" id="icon" alt="cloudy" width="150" />
           <h3 class="degrees" id="temperature"></h3>
-          <div id="select">
-            <a href="" class="links" id="celsius">
+          <div class="links">
+            <a href="#" class="active" id="celsius-link">
               °C
             </a>
             <span style="font-size: 18px; vertical-align: top;">&nbsp;|&nbsp;</span>
-            <a href="" class="links" id="fahrenheit">
+            <a href="#" id="fahrenheit-link">
               °F
             </a>
           </div>
         </div>
         <div class="col-md-4">
           <ul class="list-unstyled">
-            <li>Humidity: <span id="humidity">%</span></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
