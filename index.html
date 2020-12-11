@@ -9,15 +9,24 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/baaece22c2.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <title>Weather-app</title>
+  <title>Weather App</title>
 </head>
 
 <body>
   <!-- Container START -->
   <div class="container">
+
+    <!-- Weather app START -->
+    <div class="row justify-content-center mt-5">
+      <!-- Search Form START -->
+      <h1>Weather Forecast</h1>
+      <!-- Search Form END -->
+    </div>
+    <!-- Weather app END -->
+
     <!-- Weather app START -->
     <div class="weather-app rounded">
-
+      
       <!-- One column START -->
       <div class="row mb-4 justify-content-center">
         <!-- Search Form START -->
@@ -27,8 +36,8 @@
           <form id="search-form">
             <button type="submit" class="btn btn-dark ml-1 mr-1"><i class="fas fa-search"></i></button>
           </form>
-          <form id="search-form2">
-            <button type="submit" class="btn btn-dark" id="currentLocation">Current location</button>
+          <form>
+            <button type="button" class="btn btn-dark" id="currentLocation">Current location</button>
           </form>
         <!-- Search Form END -->
       </div>
@@ -37,8 +46,8 @@
       <!-- One column START -->
       <div class="row align-self-center">
         <!-- City START -->
-        <div class="col">
-          <h1 id="city"></h1>
+        <div class="col ml-3">
+          <h1><i class="far fa-compass" style="font-size:30px;"></i> <span id="city"></span></h1>
           <h2>Last updated on <span id="date"></span>
           </h2>
           <h2 id="description"></h2>
@@ -48,25 +57,27 @@
       <!-- One column END -->
 
       <!-- Two columns (degrees) START -->
-      <div class="row justify-content-between align-items-end">
-        <div class="col-md-8">
-          <img src="" class="main-icon" id="icon" alt="cloudy" width="150" />
-          <h3 class="degrees" id="temperature"></h3>
+      <div class="row justify-content-end">
+        <div class="col-sm-4">
           <div class="links">
-            <a href="#" class="active" id="celsius-link">
+            <img src="" class="main-icon" id="icon" alt="cloudy" />
+            <div>
+              <div style="float:left"><h3 class="degrees" id="temperature"></h3></div>
+              <div style="float:left"><a href="#" class="active" id="celsius-link">
               °C
-            </a>
-            <span style="font-size: 18px; vertical-align: top;">&nbsp;|&nbsp;</span>
-            <a href="#" id="fahrenheit-link">
+              </a>
+              <span style="font-size: 18px; vertical-align: top;">&nbsp;|&nbsp;</span>
+              <a href="#" id="fahrenheit-link">
               °F
-            </a>
+              </a></div>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <ul class="list-unstyled">
-            <li>Precipitation: <span id="precipitation"></span>%</li>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span> km/h</li>
+            <li><strong>Precipitation:</strong> <span id="precipitation"></span>%</li>
+            <li><strong>Humidity:</strong> <span id="humidity"></span>%</li>
+            <li><strong>Wind:</strong> <span id="wind"></span> km/h</li>
           </ul>
         </div>
       </div>
@@ -75,16 +86,15 @@
       <hr />
 
       <!-- Five columns cards START -->
-      <div class="row justify-content-center" id="forecast">
-
-      </div>
+      <div class="row justify-content-md-center" class="weather-forecast" id="forecast"></div>
       <!-- Five columns cards END -->
+
     </div>
     <!-- Weather app END -->
 
     <!-- Credit START -->
     <footer class="row justify-content-center">
-      <small>Coded by&nbsp;<a href="https://github.com/rebecagrant/" target="_blank">Rebeca Grant</a></small>
+      Coded by&nbsp;<a href="https://github.com/rebecagrant/" target="_blank">Rebeca Grant</a>
     </footer>
     <!-- Credit END -->
   </div>
