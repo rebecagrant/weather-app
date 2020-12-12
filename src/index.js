@@ -32,8 +32,6 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  console.log(response.data);
-
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -85,11 +83,14 @@ function handleSubmit(event) {
 
 function currentPosition(position) {
   let apiKey = `3f4a81b7800c9c7008887814c1af70f7`;
-  let latNumber = position.coords.latitude;
-  let longNumber = position.coords.longitude;
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latNumber}&lon=${longNumber}&appid=${apiKey}
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}
 &units=metric`;
-  axios.get(apiURL).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition() {
