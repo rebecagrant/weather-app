@@ -89,8 +89,8 @@ function currentPosition(position) {
 &units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 
-  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiURL).then(displayForecast);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition() {
